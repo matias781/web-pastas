@@ -1,0 +1,109 @@
+---
+// Header — El Buen Gusto Pastas
+---
+
+<header
+  id="ebg-header"
+  class="fixed top-0 left-0 right-0 z-40 transition-all duration-300"
+>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div
+      class="flex h-16 md:h-20 items-center justify-between rounded-full mt-3 md:mt-4 px-4 md:px-6 bg-ebg-crema/85 backdrop-blur-md shadow-sm border border-ebg-negro/5"
+    >
+      <!-- Logo / Brand -->
+      <a href="#hero" class="flex items-center group ebg-logo-wrap" aria-label="El Buen Gusto Pastas">
+        <img
+          src="/img/logo/logo-color.png"
+          alt="El Buen Gusto Pastas"
+          class="h-16 md:h-20 w-auto ebg-logo-anim"
+          width="80"
+          height="80"
+        />
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden lg:flex items-center gap-7">
+        <a href="#historia" class="font-body text-sm font-medium text-ebg-negro hover:text-ebg-naranja transition-colors">Historia</a>
+        <a href="#productos" class="font-body text-sm font-medium text-ebg-negro hover:text-ebg-naranja transition-colors">Productos</a>
+        <a href="#porque" class="font-body text-sm font-medium text-ebg-negro hover:text-ebg-naranja transition-colors">Por qué nosotros</a>
+        <a href="#visitanos" class="font-body text-sm font-medium text-ebg-negro hover:text-ebg-naranja transition-colors">Visitanos</a>
+      </nav>
+
+      <!-- CTA: ir a Stazione -->
+      <a
+        href="https://stazionedipasta.com.ar"
+        target="_blank"
+        rel="noopener"
+        class="hidden md:inline-flex items-center gap-2 rounded-full bg-ebg-negro hover:bg-ebg-naranja text-ebg-crema px-4 py-2 font-body text-xs font-semibold transition-all duration-300 group"
+      >
+        <span>Conocé Stazione</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+        </svg>
+      </a>
+
+      <!-- Mobile menu button -->
+      <button
+        id="ebg-mobile-toggle"
+        class="lg:hidden p-2 -mr-2 text-ebg-negro"
+        aria-label="Abrir menú"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="ebg-mobile-menu" class="lg:hidden hidden mx-4 mt-2 rounded-2xl bg-ebg-crema shadow-lg border border-ebg-negro/10">
+    <nav class="flex flex-col p-4 gap-1">
+      <a href="#historia" class="px-3 py-2.5 rounded-lg font-body text-sm font-medium text-ebg-negro hover:bg-ebg-naranja/10 hover:text-ebg-naranja transition-colors">Historia</a>
+      <a href="#productos" class="px-3 py-2.5 rounded-lg font-body text-sm font-medium text-ebg-negro hover:bg-ebg-naranja/10 hover:text-ebg-naranja transition-colors">Productos</a>
+      <a href="#porque" class="px-3 py-2.5 rounded-lg font-body text-sm font-medium text-ebg-negro hover:bg-ebg-naranja/10 hover:text-ebg-naranja transition-colors">Por qué nosotros</a>
+      <a href="#visitanos" class="px-3 py-2.5 rounded-lg font-body text-sm font-medium text-ebg-negro hover:bg-ebg-naranja/10 hover:text-ebg-naranja transition-colors">Visitanos</a>
+      <a
+        href="https://stazionedipasta.com.ar"
+        target="_blank"
+        rel="noopener"
+        class="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-ebg-negro text-ebg-crema px-4 py-3 font-body text-sm font-semibold"
+      >
+        Conocé Stazione di Pasta
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Header shrink on scroll
+  const header = document.getElementById('ebg-header');
+  if (header) {
+    const onScroll = () => {
+      if (window.scrollY > 20) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  // Mobile menu
+  const toggle = document.getElementById('ebg-mobile-toggle');
+  const menu = document.getElementById('ebg-mobile-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+    // Close on link click
+    menu.querySelectorAll('a').forEach((a) =>
+      a.addEventListener('click', () => menu.classList.add('hidden'))
+    );
+  }
+</script>

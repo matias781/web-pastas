@@ -1,0 +1,48 @@
+# ============================================
+# Web-Pastas — .gitignore
+# ============================================
+
+# Dependencias (instaladas por npm en cada deploy)
+**/node_modules/
+
+# Builds de Astro
+**/dist/
+**/.astro/
+
+# Logs y debug
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Entorno / secretos
+.env
+.env.*
+!.env.example
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos temporales
+*.tmp
+*.bak
+
+# ============================================
+# Material crudo del cliente (NO publicar)
+# Las versiones optimizadas viven en sitios/*/public/img/
+# ============================================
+assets/
+
+# PDFs y textos de referencia interna del cliente
+contenido/**/*.pdf

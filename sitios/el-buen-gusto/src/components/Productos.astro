@@ -1,0 +1,132 @@
+---
+// Productos — El Buen Gusto
+// 4 categorías con galería + CTA al sistema de pedidos
+---
+
+<section id="productos" class="relative py-20 md:py-28 bg-white overflow-hidden">
+  <!-- Patrón sutil -->
+  <div class="absolute inset-0 opacity-[0.025] pointer-events-none" aria-hidden="true">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="pasta-pattern-2" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+          <rect x="20" y="20" width="16" height="16" rx="2" stroke="#000" stroke-width="1.5" fill="none" />
+          <circle cx="65" cy="60" r="6" stroke="#000" stroke-width="1.2" fill="none" />
+          <path d="M 10 75 Q 30 70, 50 75 T 90 75" stroke="#000" stroke-width="1.2" fill="none" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#pasta-pattern-2)" />
+    </svg>
+  </div>
+
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto reveal">
+      <span class="inline-block font-display text-xs uppercase tracking-[0.25em] text-ebg-naranja-oscuro font-semibold mb-4">
+        Lo que hacemos
+      </span>
+      <h2 class="font-display font-bold text-3xl md:text-5xl text-ebg-negro leading-tight mb-5">
+        Ingredientes que hacen <span class="text-ebg-naranja italic">la diferencia</span>.
+      </h2>
+      <p class="font-body text-base md:text-lg text-ebg-negro/70">
+        Porque una buena pasta se reconoce desde el primer bocado. Productos frescos, congelados y comidas listas.
+      </p>
+    </div>
+
+    <!-- Galería de categorías -->
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+      <!-- Pastas rellenas -->
+      <a
+        href="https://www.pedidosporwhatsapp.com.ar/elbuengustopastas"
+        target="_blank"
+        rel="noopener"
+        class="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-ebg-naranja/20 transition-all duration-500 hover:-translate-y-1 reveal"
+      >
+        <img src="/img/productos/pastas-rellenas.png" alt="Pastas rellenas" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ebg-negro/90 via-ebg-negro/30 to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 p-5 flex flex-col">
+          <p class="font-display text-[10px] uppercase tracking-widest text-ebg-naranja h-4 leading-4">+30 sabores</p>
+          <h3 class="font-display font-bold text-2xl text-ebg-crema leading-tight min-h-[3.5rem] mt-1 flex items-end">Pastas rellenas</h3>
+          <div class="mt-3 flex items-center gap-1.5 text-ebg-crema text-sm font-body opacity-0 group-hover:opacity-100 transition-opacity">
+            <span>Ver catálogo</span>
+            <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Fideos largos y cortos -->
+      <a
+        href="https://www.pedidosporwhatsapp.com.ar/elbuengustopastas"
+        target="_blank"
+        rel="noopener"
+        class="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-ebg-naranja/20 transition-all duration-500 hover:-translate-y-1 reveal"
+      >
+        <img src="/img/productos/fideos-largos-cortos.jpg" alt="Fideos largos y cortos" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ebg-negro/90 via-ebg-negro/30 to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 p-5 flex flex-col">
+          <p class="font-display text-[10px] uppercase tracking-widest text-ebg-naranja h-4 leading-4">Frescos</p>
+          <h3 class="font-display font-bold text-2xl text-ebg-crema leading-tight min-h-[3.5rem] mt-1 flex items-end">Fideos largos<br/>y cortos</h3>
+          <div class="mt-3 flex items-center gap-1.5 text-ebg-crema text-sm font-body opacity-0 group-hover:opacity-100 transition-opacity">
+            <span>Ver catálogo</span>
+            <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Salsas -->
+      <a
+        href="https://www.pedidosporwhatsapp.com.ar/elbuengustopastas"
+        target="_blank"
+        rel="noopener"
+        class="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-ebg-naranja/20 transition-all duration-500 hover:-translate-y-1 reveal"
+      >
+        <img src="/img/productos/salsas.png" alt="Salsas caseras" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ebg-negro/90 via-ebg-negro/30 to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 p-5 flex flex-col">
+          <p class="font-display text-[10px] uppercase tracking-widest text-ebg-naranja h-4 leading-4">Caseras</p>
+          <h3 class="font-display font-bold text-2xl text-ebg-crema leading-tight min-h-[3.5rem] mt-1 flex items-end">Salsas</h3>
+          <div class="mt-3 flex items-center gap-1.5 text-ebg-crema text-sm font-body opacity-0 group-hover:opacity-100 transition-opacity">
+            <span>Ver catálogo</span>
+            <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Comidas congeladas -->
+      <a
+        href="https://www.pedidosporwhatsapp.com.ar/elbuengustopastas"
+        target="_blank"
+        rel="noopener"
+        class="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-ebg-naranja/20 transition-all duration-500 hover:-translate-y-1 reveal"
+      >
+        <img src="/img/productos/comidas-congeladas.png" alt="Comidas congeladas listas para servir" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ebg-negro/90 via-ebg-negro/30 to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 p-5 flex flex-col">
+          <p class="font-display text-[10px] uppercase tracking-widest text-ebg-naranja h-4 leading-4">Listas para servir</p>
+          <h3 class="font-display font-bold text-2xl text-ebg-crema leading-tight min-h-[3.5rem] mt-1 flex items-end">Comidas<br/>congeladas</h3>
+          <div class="mt-3 flex items-center gap-1.5 text-ebg-crema text-sm font-body opacity-0 group-hover:opacity-100 transition-opacity">
+            <span>Ver catálogo</span>
+            <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- CTA principal -->
+    <div class="mt-14 text-center reveal">
+      <p class="font-display italic text-lg md:text-xl text-ebg-negro/70 mb-6">
+        Pedí fácil, disfrutá mejor.
+      </p>
+      <a
+        href="https://www.pedidosporwhatsapp.com.ar/elbuengustopastas"
+        target="_blank"
+        rel="noopener"
+        class="group inline-flex items-center gap-3 rounded-full bg-ebg-naranja hover:bg-ebg-naranja-oscuro text-ebg-crema px-8 py-4 font-display font-bold text-base md:text-lg transition-all duration-300 shadow-lg shadow-ebg-naranja/30 hover:shadow-xl hover:shadow-ebg-naranja/40 hover:-translate-y-0.5"
+      >
+        <span>Ver todo el catálogo</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

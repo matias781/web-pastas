@@ -1,0 +1,86 @@
+---
+// Banner Proceso — Stazione di Pasta
+// Sección de "respiro" visual entre Filosofía y La Pasta
+// Video full-width con cita editorial superpuesta
+---
+
+<section class="relative w-full overflow-hidden bg-sdp-negro">
+  <!-- Video full-width -->
+  <div class="relative h-[60vh] md:h-[70vh] min-h-[400px] w-full">
+    <video
+      class="absolute inset-0 w-full h-full object-cover"
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="/img/productos/p4.jpg"
+    >
+      <source src="/videos/productos.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Overlay oscuro suave -->
+    <div class="absolute inset-0 bg-gradient-to-b from-sdp-negro/30 via-sdp-negro/20 to-sdp-negro/60"></div>
+
+    <!-- Cita editorial centrada -->
+    <div class="relative h-full flex items-center justify-center px-6">
+      <div class="text-center max-w-3xl proceso-reveal">
+        <div class="flex justify-center mb-6 md:mb-8">
+          <span class="inline-block h-px w-12 bg-sdp-dorado proceso-line"></span>
+        </div>
+
+        <blockquote class="font-display italic text-2xl md:text-4xl lg:text-5xl text-sdp-mediterraneo leading-[1.25] proceso-quote">
+          La masa no tiene apuro.<br />
+          <em class="italic text-sdp-dorado font-normal">Tiene su propio reloj.</em>
+        </blockquote>
+
+        <p class="mt-6 md:mt-8 font-body text-xs uppercase tracking-[0.35em] text-sdp-mediterraneo/70 proceso-caption">
+          — El oficio, todos los días
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Línea decorativa carmín inferior -->
+  <div class="absolute bottom-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-sdp-carmin to-transparent"></div>
+</section>
+
+<style>
+  .proceso-line {
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .proceso-quote,
+  .proceso-caption {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 1.2s ease, transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .proceso-caption {
+    transition-delay: 0.35s;
+  }
+
+  .proceso-reveal.is-visible .proceso-line {
+    transform: scaleX(1);
+  }
+  .proceso-reveal.is-visible .proceso-quote,
+  .proceso-reveal.is-visible .proceso-caption {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.4 }
+  );
+  document.querySelectorAll('.proceso-reveal').forEach((el) => observer.observe(el));
+</script>

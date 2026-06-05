@@ -1,0 +1,104 @@
+---
+// Header — Stazione di Pasta
+---
+
+<header
+  id="sdp-header"
+  class="fixed top-0 left-0 right-0 z-40 transition-all duration-500"
+>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div
+      class="flex h-16 md:h-20 items-center justify-between mt-3 md:mt-4 px-5 md:px-7 bg-sdp-mediterraneo/85 backdrop-blur-md border border-sdp-negro/5 rounded-sm"
+    >
+      <!-- Logo / Brand -->
+      <a href="#hero" class="flex items-center group sdp-logo-wrap" aria-label="Stazione di Pasta">
+        <img
+          src="/img/logo/logo-color.png"
+          alt="Stazione di Pasta"
+          class="h-14 md:h-16 w-auto sdp-logo-anim"
+          width="180"
+          height="80"
+        />
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden lg:flex items-center gap-9">
+        <a href="#filosofia" class="font-display text-sm text-sdp-negro hover:text-sdp-carmin transition-colors">Filosofía</a>
+        <a href="#productos" class="font-display text-sm text-sdp-negro hover:text-sdp-carmin transition-colors">La pasta</a>
+        <a href="#visitanos" class="font-display text-sm text-sdp-negro hover:text-sdp-carmin transition-colors">Encontranos</a>
+      </nav>
+
+      <!-- CTA: ir a El Buen Gusto -->
+      <a
+        href="https://elbuengustopastas.com.ar"
+        target="_blank"
+        rel="noopener"
+        class="hidden md:inline-flex items-center gap-2 border border-sdp-negro/30 hover:border-sdp-carmin hover:text-sdp-carmin text-sdp-negro px-4 py-1.5 font-display text-xs italic transition-colors group"
+      >
+        <span>Conocé El Buen Gusto</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+        </svg>
+      </a>
+
+      <!-- Mobile menu button -->
+      <button
+        id="sdp-mobile-toggle"
+        class="lg:hidden p-2 -mr-2 text-sdp-negro"
+        aria-label="Abrir menú"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="sdp-mobile-menu" class="lg:hidden hidden mx-4 mt-2 bg-sdp-mediterraneo border border-sdp-negro/10 shadow-lg">
+    <nav class="flex flex-col p-4 gap-1">
+      <a href="#filosofia" class="px-3 py-3 font-display text-sm text-sdp-negro hover:bg-sdp-carmin/10 hover:text-sdp-carmin transition-colors">Filosofía</a>
+      <a href="#productos" class="px-3 py-3 font-display text-sm text-sdp-negro hover:bg-sdp-carmin/10 hover:text-sdp-carmin transition-colors">La pasta</a>
+      <a href="#visitanos" class="px-3 py-3 font-display text-sm text-sdp-negro hover:bg-sdp-carmin/10 hover:text-sdp-carmin transition-colors">Encontranos</a>
+      <a
+        href="https://elbuengustopastas.com.ar"
+        target="_blank"
+        rel="noopener"
+        class="mt-2 inline-flex items-center justify-center gap-2 border border-sdp-negro/30 text-sdp-negro px-4 py-3 font-display italic text-sm"
+      >
+        Conocé El Buen Gusto
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Header on-scroll: agrega más opacidad de fondo
+  const header = document.getElementById('sdp-header');
+  if (header) {
+    const onScroll = () => {
+      if (window.scrollY > 20) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  // Mobile menu
+  const toggle = document.getElementById('sdp-mobile-toggle');
+  const menu = document.getElementById('sdp-mobile-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => menu.classList.toggle('hidden'));
+    menu.querySelectorAll('a').forEach((a) =>
+      a.addEventListener('click', () => menu.classList.add('hidden'))
+    );
+  }
+</script>

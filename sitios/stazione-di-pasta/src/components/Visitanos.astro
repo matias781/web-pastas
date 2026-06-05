@@ -1,0 +1,88 @@
+---
+// Encontranos — Stazione di Pasta
+// Mapa + datos en clave editorial
+---
+
+<section id="visitanos" class="relative py-24 md:py-36 bg-sdp-negro overflow-hidden">
+  <!-- Línea decorativa carmín superior -->
+  <div class="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-sdp-carmin to-transparent"></div>
+
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="max-w-3xl reveal">
+      <p class="font-body text-xs uppercase tracking-[0.35em] text-sdp-dorado mb-6">
+        04 — Encontranos
+      </p>
+      <h2 class="font-display text-3xl md:text-5xl lg:text-6xl text-sdp-mediterraneo leading-[1.15]">
+        Una <em class="italic text-sdp-carmin font-normal">parada</em>, en Villa Ballester.
+      </h2>
+      <p class="mt-6 font-display italic text-lg md:text-xl text-sdp-mediterraneo/75 leading-relaxed max-w-xl">
+        La masa empezó temprano. Te esperamos hasta tarde.
+      </p>
+    </div>
+
+    <!-- Grid Maps + Info -->
+    <div class="mt-16 grid grid-cols-1 lg:grid-cols-5 gap-8 reveal">
+      <!-- Mapa -->
+      <div class="lg:col-span-3 aspect-[4/3] lg:aspect-auto overflow-hidden shadow-2xl border border-sdp-mediterraneo/10">
+        <iframe
+          src="https://www.google.com/maps?q=Lacroze%205027%2C%20Villa%20Ballester%2C%20Buenos%20Aires&output=embed"
+          class="w-full h-full min-h-[400px]"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación Stazione di Pasta"
+        ></iframe>
+      </div>
+
+      <!-- Datos -->
+      <div class="lg:col-span-2 flex flex-col gap-8">
+        <!-- Card de datos -->
+        <div class="bg-sdp-mediterraneo text-sdp-negro p-8 md:p-10">
+          <!-- Dirección -->
+          <div>
+            <p class="font-body text-xs uppercase tracking-[0.3em] text-sdp-dorado mb-2">La estación</p>
+            <p class="font-display italic text-3xl text-sdp-carmin leading-tight">Lacroze 5027</p>
+            <p class="font-body text-sm text-sdp-negro/70 mt-1">Villa Ballester, Buenos Aires</p>
+          </div>
+
+          <!-- Horarios -->
+          <div class="mt-8 pt-6 border-t border-sdp-negro/10">
+            <p class="font-body text-xs uppercase tracking-[0.3em] text-sdp-dorado mb-3">Horarios</p>
+            <p class="font-display text-base text-sdp-negro leading-relaxed">
+              Martes a sábados<br />
+              <em class="italic text-sdp-oliva font-normal">de 9 a 21</em>
+            </p>
+            <p class="font-display text-base text-sdp-negro leading-relaxed mt-3">
+              Domingo<br />
+              <em class="italic text-sdp-oliva font-normal">de 9 a 13:30</em>
+            </p>
+          </div>
+
+          <!-- Contacto -->
+          <div class="mt-8 pt-6 border-t border-sdp-negro/10">
+            <p class="font-body text-xs uppercase tracking-[0.3em] text-sdp-dorado mb-3">Hablanos</p>
+            <a href="https://wa.me/5491125090058" target="_blank" rel="noopener" class="block font-display text-base text-sdp-negro hover:text-sdp-carmin transition-colors">
+              +54 9 11 2509-0058
+            </a>
+            <a href="https://instagram.com/stazionedipasta" target="_blank" rel="noopener" class="block font-display italic text-base text-sdp-negro hover:text-sdp-carmin transition-colors mt-1">
+              @stazionedipasta
+            </a>
+          </div>
+        </div>
+
+        <!-- CTA cómo llegar -->
+        <a
+          href="https://maps.app.goo.gl/3WV9uvcjER1tQdoHA"
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center justify-center gap-2 bg-sdp-carmin hover:bg-sdp-carmin-oscuro text-sdp-mediterraneo px-6 py-4 font-display text-sm md:text-base transition-all duration-500 shadow-xl shadow-sdp-carmin/30 hover:-translate-y-0.5"
+        >
+          <span>Cómo llegar</span>
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
